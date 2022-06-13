@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+
+
+*{
+    font-family: 'Karla', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+p{
+    color: $GrayishBlue;
+}
+body{
+    font-weight: 400;
+    height: 100vh;
+    background-color: $LightGray;
+    font-size: 16px;
+
+    @media screen and(max-width:600px) {
+        font-size: 3vw;
+    }
+    main{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container{
+            border-radius: 0.5rem;
+            box-shadow: 0 0 1.5rem lightgray;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 
+            'top top'
+            'subscription why';
+            max-width: 650px;
+
+            @media screen and(max-width:600px) {
+
+                width: 80%;
+                grid-template-areas: 
+                'top'
+                'subscription'
+                'why';
+                grid-template-columns: 1fr;
+
+            }
+            
+            & > *{
+                padding: 40px;
+
+                & > *:not(.subscription){
+
+                    &:first-child{
+                        margin-bottom: 20px;
+                    }
+                   
+                }
+            }
+
+            .top{
+                grid-area: top;
+                background-color: white;
+                h2{
+                    color: $Cyan;
+                }
+                h3{
+                    color: $BrightYellow;
+                    margin-bottom: 10px;
+                }
+                P{
+                    line-height: 1.5;
+                    
+                }
+            }
+
+
+
+            .subscription{
+                
+                grid-area: subscription;
+                background-color: $Cyan;
+                display: grid;
+
+                color: white;
+                p{
+                    color: white;
+                }
+
+                h3{
+                    margin-bottom: 0;
+                }
+                .prices{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                    .price{
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        
+                        p{
+                            color: rgb(215, 215, 215);
+                        }
+
+                    }
+                    
+
+                    
+                }
+
+                .button{
+                    margin-top: 30px;
+                    width: 100%;
+                    background-color: $BrightYellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    border-radius: 0.5rem;
+                    font-weight: 700;
+                    
+                }
+            }
+            .why{
+                color: white;
+                grid-area: why;
+                background-color: lighten($color: $Cyan, $amount: 3%);
+                p{
+                    color: rgb(218, 218, 218);
+                    line-height: 1.5;
+                    font-size: 0.9em;
+                    padding-right: 20%;
+                }
+            }
+
+        }
+    }
+}

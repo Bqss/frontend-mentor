@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  font-family: 'Karla', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: #98a6bd;
+}
+
+body {
+  font-weight: 400;
+  height: 100vh;
+  background-color: #e5eff5;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 3vw;
+  }
+}
+
+body main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body main .container {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.5rem lightgray;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'top top' 'subscription why';
+  max-width: 650px;
+}
+
+@media screen and (max-width: 600px) {
+  body main .container {
+    width: 80%;
+    grid-template-areas: 'top' 'subscription' 'why';
+    grid-template-columns: 1fr;
+  }
+}
+
+body main .container > * {
+  padding: 40px;
+}
+
+body main .container > * > *:not(.subscription):first-child {
+  margin-bottom: 20px;
+}
+
+body main .container .top {
+  grid-area: top;
+  background-color: white;
+}
+
+body main .container .top h2 {
+  color: #2ab2af;
+}
+
+body main .container .top h3 {
+  color: #c0df34;
+  margin-bottom: 10px;
+}
+
+body main .container .top P {
+  line-height: 1.5;
+}
+
+body main .container .subscription {
+  grid-area: subscription;
+  background-color: #2ab2af;
+  display: grid;
+  color: white;
+}
+
+body main .container .subscription p {
+  color: white;
+}
+
+body main .container .subscription h3 {
+  margin-bottom: 0;
+}
+
+body main .container .subscription .prices {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+body main .container .subscription .prices .price {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+body main .container .subscription .prices .price p {
+  color: #d7d7d7;
+}
+
+body main .container .subscription .button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #c0df34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+body main .container .why {
+  color: white;
+  grid-area: why;
+  background-color: #2dbebc;
+}
+
+body main .container .why p {
+  color: #dadada;
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding-right: 20%;
+}
+/*# sourceMappingURL=index.css.map */

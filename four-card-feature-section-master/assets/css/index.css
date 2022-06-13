@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  background-color: #fafafa;
+  font-family: 'Poppins',sans-serif;
+}
+
+body .container {
+  margin: 7rem 0;
+  width: 80%;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+}
+
+body .container .heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+body .container .heading .title .thin {
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: #a3a5ae;
+}
+
+body .container .heading .title .bold {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+body .container .heading .paragraph p {
+  color: #a3a5ae;
+}
+
+@media screen and (min-width: 768px) {
+  body .container .heading {
+    align-self: center;
+    width: 40%;
+  }
+}
+
+body .container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+body .container .content .card-1 {
+  border-top: 4px solid #45d3d3;
+}
+
+body .container .content .card-2 {
+  border-top: 4px solid #ea5353;
+}
+
+body .container .content .card-3 {
+  border-top: 4px solid #fcaf4a;
+}
+
+body .container .content .card-4 {
+  border-top: 4px solid #549ef2;
+}
+
+body .container .content .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+body .container .content .card {
+  border-radius: 1rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 7px 1.5rem #a3a5ae;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+body .container .content .card .text {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+body .container .content .card .text .name {
+  font-weight: 600;
+}
+
+body .container .content .card .text p {
+  font-size: 0.95em;
+  color: #a3a5ae;
+}
+
+body .container .content .card .image {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  body .container .content {
+    flex-direction: row;
+  }
+}
+/*# sourceMappingURL=index.css.map */

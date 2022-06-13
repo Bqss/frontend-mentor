@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/mixim.scss"
+    ],
+    "names": [],
+    "file": "mixim.css"
+}

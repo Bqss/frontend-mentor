@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap');
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+:root{ 
+    --mainbg : hsl(217, 54%, 11%);
+    --cardbg: hsl(216, 50%, 16%);
+    --line: hsl(213, 39%, 71%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font : 15px 'Outfit', sans-serif;
+    
+    background-color: var(--mainbg);
+    display:flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card_container{
+    padding:1.2em;
+    margin:auto;
+    max-width: 20em;
+    background-color: var(--cardbg);
+    border-radius: 5%;
+    overflow: hidden;
+    color:White;
+    
+
+    
+}
+
+.card-image{
+    background-repeat: no-repeat;
+    background-color: rgba(0, 255, 255, 0.631);
+    background-image: url("../nft-preview-card-component-main/images/icon-view.svg");
+    background-position: center;
+    border-radius: 5%;
+    height: auto;
+    height: 264px;
+}
+.card-image .card_image:hover{
+    opacity: 0.4;
+
+}
+.card_container .card_image{
+    max-width: 100%;
+    border-radius: 5%;
+}
+.desc{
+    border-bottom: 1px solid var(--line);
+}
+
+.space{
+    margin:0.8em 0;
+}
+
+.card-body .item-name{
+    font-weight: 600;
+    font-size: 1.1em;
+   
+}
+
+.card-body .item-name:hover{
+    color: aqua;
+}
+
+.card-body .item-detail{
+    margin-bottom: 1em;
+}
+
+.card-body .item-description{
+    font-size: 13;
+    font-weight: 200;
+    color:var(--line);
+}
+
+.card-body .mini-container{
+    width: 50%;
+    display:flex;
+}
+.card-body .mini-container p{
+    display: inline-block;
+}
+.card-body .price{
+    float:left;
+    color:aqua;
+    font-size: 0.9em;
+}
+
+.space-little{
+    margin-right : 0.4em;
+}
+
+.card-body .time{
+    font-size: 0.9em;
+    color:var(--line);
+    font-weight:300;
+    float:right;
+    display: flex;
+    justify-content: right;
+}
+
+.creator{
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+}
+
+.creator  img{
+    width: 10%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.creator a{
+    text-decoration: none;
+    color: white;
+}
+
+.creator a:hover{
+    color: aqua;
+}
+.abu{
+    color: var(--line);
+}
+
+
+
+
+
+
+
+
+
+
+

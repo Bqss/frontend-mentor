@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    font-size: 10px;
+--Verydarkblue: hsl(233, 47%, 7%);
+--Darkdesaturatedblue: hsl(244, 38%, 16%);
+--Softviolet :hsl(277, 64%, 61%);
+--White: hsl(0, 0%, 100%);
+--Slightlytransparentwhite1: hsla(0, 0%, 100%, 0.75);
+--Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--Verydarkblue);
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'inter';
+}
+
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.wrapper .text{
+    background-color: var(--Darkdesaturatedblue);
+    padding: 7rem;
+    display: grid;
+}
+
+.text .title{
+    font-size: 2.1em;
+    font-weight: 700;
+}
+
+.text .title span{
+    color: var(--Softviolet);
+}
+
+.text .paragraph{
+    color: var(--Slightlytransparentwhite);
+    line-height: 1.7;
+    font-size: 0.88em;
+    width: 85%;
+    
+}
+
+.text .stats{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stat .quantity{
+    font-weight: 700;
+}
+.stat .products{
+    font-family: 'Lexend Deca';
+    text-transform: uppercase;
+    color: var(--Slightlytransparentwhite);
+    margin-top: 0.5rem;
+    font-size: 0.8em;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.image {
+    position: relative;
+}
+
+.image::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top:0;
+    background-color: rgb(88, 36, 137);
+    width: 100%;
+    bottom: 0;
+    opacity: 0.6;
+}
+
+
+@media screen and (max-width:425px){
+
+    .container{
+        width: 90%;
+    }    
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'image'
+        'text'
+        'text';
+        text-align: center;
+    }
+
+    .image{
+        order: -1;
+        grid-area: image;
+        
+    }
+    .image img {
+        content: url("images/image-header-mobile.jpg");
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    .wrapper .text{
+        grid-area: text;
+    }
+    .text > *{
+        margin-top: 2rem;
+    }
+    .text .stats {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    justify-content: space-between;
+        align-items: center;
+    }
+    .text .paragraph{
+        width: 100%;
+    }
+    .stat{
+        margin-top: 1rem;
+    }
+}
+
+

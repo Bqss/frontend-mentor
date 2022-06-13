@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  min-height: 100vh;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  background: #ecf2f8;
+  justify-content: center;
+}
+
+body .container {
+  max-width: 1200px;
+  display: grid;
+  gap: 30px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  grid-area: 1fr;
+}
+
+@media (max-width: 1150px) {
+  body .container {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container {
+    width: 90%;
+    margin: 70px auto;
+  }
+}
+
+body .container .testimoni {
+  padding: 30px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+body .container .testimoni .profile {
+  display: flex;
+  gap: 1rem;
+}
+
+body .container .testimoni .profile img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+body .container .testimoni .profile .profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body .container .testimoni .profile .profile-info P {
+  opacity: .5;
+  font-size: .9em;
+}
+
+body .container .testimoni h2 {
+  font-size: 1.34rem;
+}
+
+body .container .testimoni p {
+  font-size: 1.1em;
+  opacity: 70%;
+}
+
+body .container .testimoni[name="white"] {
+  color: white;
+}
+
+body .container .testimoni1 {
+  background-color: url("../images/bg-pattern-quotation.svg");
+  position: relative;
+  background-size: cover;
+  grid-column: 1/3;
+  background: #7541c8;
+}
+
+body .container .testimoni1 .quotes-image {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 80px;
+  width: 110px;
+}
+
+body .container .testimoni1 > *:not(img) {
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  body .container .testimoni1 {
+    grid-column: span 4;
+    grid-row: span 1;
+    order: 1;
+  }
+}
+
+body .container .testimoni2 {
+  grid-column: span 1;
+  background: #48556a;
+}
+
+@media (max-width: 900px) {
+  body .container .testimoni2 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container .testimoni2 {
+    grid-column: span 4;
+    grid-row: span 1;
+    order: 3;
+  }
+}
+
+body .container .testimoni3 {
+  grid-row: span 2;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  body .container .testimoni3 {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container .testimoni3 {
+    grid-column: span 4;
+    grid-row: span 1;
+    order: 5;
+  }
+}
+
+body .container .testimoni4 {
+  grid-column: span 1;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  body .container .testimoni4 {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  body .container .testimoni4 {
+    grid-column: span 4;
+    grid-row: span 1;
+    order: 3;
+  }
+}
+
+body .container .testimoni5 {
+  grid-column: span 2;
+  background: black;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  body .container .testimoni5 {
+    grid-column: span 4;
+    grid-row: span 1;
+    order: 4;
+  }
+}
+/*# sourceMappingURL=index.css.map */

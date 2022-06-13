@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --PaleBlue:hsl(243, 100%, 93%);
+    --mozanimation: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VerydarkBlue: hsl(229, 57%, 11%);
+}
+
+body{
+    font-family: 'Raleway';
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+    background: url('../images/bg-desktop.png')  var(--VerydarkBlue);
+
+    background-repeat: no-repeat;
+    background-position: top 110% center ;
+}
+.container{
+    width: 65vw;
+    margin :auto;
+    
+}
+.wrapper{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns : 1.3fr minmax(500px,2fr);
+}
+.wrapper > div{
+    background-color: var(--DarkBlue);
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+.wrapper .profile{
+    display: grid;
+    flex-direction: column;
+    gap: 4rem;
+    border-top-right-radius: 10rem;
+    padding-right: 4rem;
+}
+.profile .upload{
+    display: grid;
+    grid-template-columns: repeat(3,50px);
+    gap: 1.5rem;
+    grid-template-rows: 50px;
+    
+}
+
+.upload .image{
+    width: 100%;
+    height: 100%;
+    background-color: var(--VerydarkBlue);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wrapper .storage{
+    max-height: 750%;
+    align-self: flex-end;
+    position: relative;
+    font-size: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    
+}
+
+.storage .warn{
+    position: absolute;
+    right: 4rem;
+    top: -6rem;
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+    gap: .8rem;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 1.5rem;
+    border-radius:1rem;
+    border-bottom-right-radius: -2rem;
+    z-index: 2;
+}
+.storage  > p{
+    color:var(--PaleBlue);
+}
+.storage  span{
+    color: white;
+    font-weight: 700;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-right-color: white;
+    position: absolute;
+    right: 4rem;
+    top: -5rem;
+}
+.warn h1{
+    font-size: 3em;
+    font-weight: 700;
+}
+.warn p{
+    text-transform: uppercase;
+
+}
+
+
+.statusbar{
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--VerydarkBlue);
+}
+.statusbar .coloredbar{
+    width: 81.5%;
+    height: 100%;
+    border-radius: inherit;
+    background : linear-gradient(to right , hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    padding: 0.23rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.coloredbar .ball{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width:576px) {
+    body{
+        background: url('../images/bg-mobile.png')  var(--VerydarkBlue);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        width: 88%;
+    }
+    .wrapper{
+        grid-template-columns: minmax(342px ,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+    
+    }
+    .storage .warn{
+        right:25%;
+        top: unset;
+        bottom: -6rem;
+    }
+    .triangle{
+        display: none;
+    }
+
+}
+

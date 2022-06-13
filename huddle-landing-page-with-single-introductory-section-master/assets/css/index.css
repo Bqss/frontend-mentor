@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: url("../images/bg-desktop.svg"), #674baf;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+body .container {
+  margin: 65px auto;
+  max-width: 1260px;
+  display: flex;
+  gap: 80px;
+  font-size: 16px;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1283px) {
+  body .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body .container header .logo {
+    width: 50%;
+  }
+}
+
+body .container main {
+  color: white;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+body .container main img {
+  width: 100%;
+}
+
+body .container main > div:first-child {
+  flex: 1 1 60%;
+}
+
+body .container main > div:last-child {
+  flex: 1 1 calc(40% - 60px);
+  padding-top: 60px;
+}
+
+body .container main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+body .container main > div h1 {
+  font-size: 2.5rem;
+  line-height: 1.6;
+}
+
+body .container main > div p {
+  font-size: 0.98em;
+  line-height: 1.5;
+}
+
+body .container main > div .btn {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border-radius: 2rem;
+  color: #674baf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px #343434;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+body .container main > div .btn:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  body .container main > div h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  body .container main > div p {
+    text-align: center;
+  }
+  body .container main > div .btn {
+    place-self: center;
+  }
+}
+
+body .container footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  body .container footer {
+    justify-content: center;
+  }
+}
+
+body .container footer .link-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+body .container footer .link-wrapper li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+body .container footer .link-wrapper li a {
+  padding: 2rem;
+  color: white;
+  display: inline-block;
+}
+
+body .container footer .link-wrapper li:hover {
+  border-color: #e882e8;
+}
+
+body .container footer .link-wrapper li:hover a {
+  color: #e882e8;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+
+--Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Verydarkcyan: hsl(179, 100%, 13%);
+
+--Transparentwhite: hsla(0, 0%, 100%, 0.75);
+--Verylightgray: hsl(0, 0%, 95%);
+}
+
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Lexend Deca',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container{
+    
+    width: 68em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 2%;
+    background-color: red;
+}
+.square {
+    height :37em;
+    padding: 3em;
+    position: relative;
+}
+.sedans{
+    background-color: var(--Brightorange);
+}
+.suv{
+    background-color: var(--Darkcyan);
+}
+.luxury{
+    background-color: var(--Verydarkcyan);
+}
+
+.content{
+    height: 100%;
+}
+
+/* car type */
+.cartype{
+    
+    font-family: 'Big Shoulders Display';
+    margin: 1.2em 0;
+    font-size: 2.3em;
+    color: var(--Verylightgray);
+}
+.desc{
+    font-family: 'Lexend Deca';
+    line-height: 1.8em;
+    color: var(--Transparentwhite);
+}
+
+.btn{
+    border: 2px solid white;
+    font-size: 1em;
+    border-radius: 1em;
+    position: absolute;
+    bottom: 4em;
+    margin-top: 4em;
+    padding: 1em 2em;
+    font-weight: 400;
+    font-family: 'Lexend Deca';
+}
+
+.btn1{
+    color: var(--Brightorange);
+}
+
+.btn2{
+    color: var(--Darkcyan);
+}
+
+.btn3{
+    color: var(--Verydarkcyan);
+}
+
+.btn1:hover{
+    color: white;
+    background-color: var(--Brightorange);
+    cursor:pointer;
+}
+
+.btn2:hover{
+    color: white;
+    background-color: var(--Darkcyan);
+    cursor: pointer;
+}
+
+.btn3:hover{
+    color: white;
+    background-color: var(--Verydarkcyan);
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1020px){
+    body{
+        padding: 5em 2em;
+    }
+    .container {
+        display:block;
+        
+    }
+    .square{
+        height: 32em;
+    }
+}
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+

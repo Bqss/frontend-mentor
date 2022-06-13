@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Kumbh sans',sans-serif;
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+
+    height: 720px;
+    background-size: 70% , 70%;
+    background-repeat: no-repeat;
+    background-position: top 140% left -70% , right -70% bottom 180%;
+    background-color: var(--Darkcyan);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* container */
+.container{
+    width: 18em;
+    height: 20em;
+    border-radius: 5%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 20px 10px  100px -1px black;
+}
+
+/* top */
+.top{
+    width: 100%;
+    height: 35%;
+    background-image: url("images/bg-pattern-card.svg");
+    background-color: red;
+    
+}
+/* end of top */
+.mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mid img{
+    
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+/* end of mid */
+
+/*bottom*/
+
+.bottom{
+    margin: 70px 0 0 0;
+    height: 65%;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* identity */
+.identity{
+    border-bottom: 1px solid var(--Darkgray);
+    height: 35%;
+    width: 100%;
+}
+
+.username{
+    font-weight: 700;
+    
+}
+.age{
+    margin-left: 4px;
+}
+.abu{
+    color:var(--Darkgray);
+}
+.asal{
+    font-size: 15px;
+}
+/* end of identity */
+
+/* stat */
+.stat{
+    width: 100%;
+    height: 36%;
+    padding: 0 0.69em ;    
+}
+
+.stat .square{
+    
+    width: 33.333333333%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    line-height: 1.15;
+    padding: 1em;
+}
+
+.stat .quantity{
+    font-weight: 700;
+}
+.stat .desc{
+    font-weight: 400;
+    font-size: 0.65em;
+    letter-spacing: 1px;
+    color: var(--Darkgray);
+}
+
+@media screen and (max-width:375px) {
+    body{
+        background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+        background-position: top -130px left -180px , right -200px bottom -140px;
+        background-size: 100%,100%;
+    }
+    
+}
+
+
+
+
+
