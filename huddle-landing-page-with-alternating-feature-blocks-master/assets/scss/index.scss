@@ -1,0 +1,401 @@
+$Pink: hsl(322, 100%, 66%);
+$VeryPaleCyan: hsl(193, 100%, 96%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4{
+    font-family: 'Poppins',sans-serif;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+
+    @media(max-width:800px){
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .container{
+        display: flex;
+        max-width: 1220px;
+        margin: 0 auto;
+        flex-direction: column;
+        @media(max-width: 1400px){
+            width: 80%;
+        }
+        @media(max-width: 520px){
+            width: 90%;
+        }
+    }
+    .btn{
+
+        button{
+            border: none;
+            padding: 20px 63px;
+            box-shadow: 0 2px 10px lightgray;
+            border-radius: 2rem;
+            background-color: white;
+            font-size: .9rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+        
+    }
+
+    header{
+            background: url('../images/bg-hero-desktop.svg') $VeryPaleCyan;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+           
+        .container{
+            display: flex;
+            gap: 70px;
+            padding: 65px 0;
+            max-width: 1270px;
+
+            
+            nav{
+
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .btn button{
+                    &:hover{
+                        opacity: .6;
+                        
+                    }
+                }
+                @media(max-width:576px){
+                   .logo{
+                       width: 50%;
+                   }
+                    & > *{
+
+                        button{
+                            padding: 3vw 5vw;
+                        }
+                    }
+                }
+            }
+        }
+        .product{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 80px;
+
+            
+            & > .image{
+                flex: 1 1 calc(60% - 80px);
+            }
+            & > .description{
+                flex: 1 1 calc(40% - 80px);
+                h1{
+                    margin-bottom: 50px;
+                    font-size: 2.5rem;
+                }
+                p{
+                    margin-bottom: 35px;
+                    font-size: 1.1943rem;
+                }
+                @media(max-width: 540px){
+                    h1{
+                        font-size: 7vw;
+                    }
+                    p{
+                        font-size: 4vw;
+                    }
+                }
+                .btn{
+                    button{
+                        background-color: $Pink;
+                        cursor: pointer;
+                        color: white;
+                        &:hover{
+                            background-color: lighten($Pink, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        .container{
+            position: relative;
+            padding: 160px 0;
+            padding-bottom: 320px;
+            margin: 0 auto;
+
+            @media(max-width:612px){
+                padding: 30vw 0;
+            }
+            
+            .fitures{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 40px;
+
+                & > .fiture{
+                    
+                    padding: 55px  40px 55px 120px;
+                    border: 2px solid #f4f3f3;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 1rem #cfcece;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 165px;
+                    @media(max-width:860px){
+                        flex-direction: column;
+                        gap: 65px;
+                        padding: 10vw 8vw;
+
+                    }
+
+                    & > .fiture-image{
+                        flex: 1 1 calc(45% - 165px);
+                    }
+                    & > .fiture-desc{
+                        flex: 1 1 calc(55% - 165px);
+                        display: flex;
+                        align-items: center;
+
+                        .wrapper{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                 
+                            p{
+                                font-size: 1.1em;
+                                line-height: 1.3;
+                                opacity: 0.6;
+                            }
+
+                            @media(max-width:612px){
+                                gap: 20px;
+                                p{
+                                    font-size: 1.04em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+        
+            .triger-section{
+                position: absolute;
+                margin: 0 auto;
+                margin-top: 160px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                width:65%;
+                height: 240px;
+                border: 2px solid #f4f3f3;
+                border-radius: 1rem;
+                box-shadow: 0 0 .5rem #cfcece;
+                bottom: -80px;
+                background-color: white;
+                left: 14%;
+                .btn{
+                    button{
+                        padding: 25px 100px;
+                        color: white;
+                        background-color: $Pink;
+                        &:hover{
+                            background-color: lighten($Pink, 10%);
+                        }
+                    }
+                }
+
+                @media(max-width:1000px){
+                    width: 90%;
+                    gap: 20px;
+                    left: 5%;
+                    font-size: 2vw;
+                    height: 40vw;
+                    .btn{
+                        button{
+                            padding: 4vw 7vw;
+                            font-size: 3vw;
+                            
+
+                        }
+                    }
+                }
+            }
+    }
+
+    
+
+    }
+
+    footer{
+        background-color: $VeryDarkCyan;
+        .container{
+            
+            color: white;
+            padding: 195px 0 65px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+
+            @media(max-width:943px){
+                .bottom{
+                    text-align: left;
+                    
+                    .sosmeds {
+                        gap: 30px;
+                    }
+                }
+            }
+
+            .bottom{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 100px;
+                @media(max-width : 400px){
+                    flex-direction: row;
+
+                }
+
+                & > *:nth-child(1){
+                    flex: 1 1 calc(35% - 100px);
+                }
+                & > *:nth-child(2){
+                    flex: 1 1 calc(40% - 100px);
+                }
+                
+                & > *:nth-child(3){
+                    flex: 1 1 calc(25% - 100px);
+                }
+                .company-info{
+
+                    
+                    
+                    .info-wrapper{
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .info{
+                            display: flex;
+                            gap: 20px;
+                            
+                            & > .icon{
+                                
+                                width: max-content;
+                                img{
+                                    width: 20px;
+                                }
+                                
+                                
+                            }
+                            &:first-child{
+                                .icon img{
+                                    width: 55px;
+                                }
+                            }
+                            & > .info-description{
+                            
+                                p{
+                                    font-size: 0.9rem;
+                                    font-weight: 300;
+                                    opacity: .7;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                .links{
+                    display: flex;
+                    align-content: flex-start;
+                    ul{
+                        list-style: none;
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        column-gap: 100px;
+                        
+
+                        a{  
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1rem;
+                            transition: .3s;
+                            &:hover{
+                                border-bottom: 2px solid white;
+                            }
+                        }
+                    }
+                    @media(max-width : 570px){
+                        justify-content: center;
+                    }
+                    @media(max-width : 440px){
+                        ul{
+                            width: 90vw;
+                            grid-template-columns: 1fr;
+                        }
+                        
+                    }
+                    
+                }
+
+                .sosmeds{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        gap: 13px;
+                        li{
+                            cursor: pointer;
+                            &:hover{
+                                a{
+                                    color: $Pink;
+                                    border-color: $Pink;
+                                }
+                            }
+                            a{
+                                color: white;
+                                display: inline-flex;
+                                width: 40px;
+                                height: 40px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                border: 2px solid white;
+                                
+                                
+                                
+                            }
+                        }
+
+                    }
+                    .copyright p{
+                        font-size: .6rem;
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}

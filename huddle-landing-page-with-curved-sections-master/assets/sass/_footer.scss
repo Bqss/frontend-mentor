@@ -1,0 +1,129 @@
+ @use 'var'as v;
+ footer{
+     color: white;
+     background-color: v.$VeryDarkCyan;
+     padding-bottom: 80px;
+     .curve{
+         height: 150px;
+         background: url('../images/bg-footer-top-desktop.svg');
+         background-size: 100% 100%;
+         background-position: center;
+         background-color: white;
+     }
+
+     .wrapper .container{
+         display: flex;
+         padding-top: 120px;
+         gap: 100px;
+         justify-content: space-between;
+         p{
+             opacity: .6;
+             font-size: .86rem;
+         }
+
+         .institution-information{
+             flex: 0 1 300px;
+             display: flex;
+             flex-direction:  column;
+             gap: 33px;
+
+         }
+
+         .contact{
+
+            & >*{
+                display: flex;
+                gap: 20px;
+            }
+            .phone{
+               margin-bottom: 20px;
+            }
+            .email{
+                margin-bottom: 60px;;
+
+            }
+         }
+         .socmed{
+             ul{
+                display: flex;
+                list-style: none;
+                gap: 23px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    justify-content:center ;
+                    align-items: center;
+                    border: 1px solid white;
+                    border-radius: 1rem;
+                    transition: .4s;
+                   
+                }
+             }
+         }
+         .subscribe{
+
+            & > *:not(form){
+                width: min(338px,100%);
+            }
+             flex: 0 1 520px;
+             display: flex;
+             flex-direction: column;
+             gap: 31px;
+             h3{
+                 font-size: 1.4rem;
+                 text-transform: uppercase;
+             }
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 35px;
+                
+                & > *{
+                    
+                    padding: 1em;
+                    border-radius: .7rem ;
+                }
+                button{
+                    padding: 1em 3em;
+                }
+                input{
+                    flex: 1 1 calc(65% - 35px);
+                    &::placeholder{
+                        font-size: 1.2rem;
+                    }
+                    &[value="false"]{
+                        outline: 1px solid v.$LightRed;
+                    }
+                }
+                .validate{
+                    position: relative;
+                    top: -40px;
+                    left: -10px;
+                    color: v.$LightRed;
+                }
+            }
+         }
+     }
+     @media(max-width : 768px){
+        .curve{
+            height: 40px;
+        }
+        .wrapper .container{
+            flex-direction: column;
+            gap: 100px;
+            .institution-information{
+                order: 2;
+            }
+            .subscribe{
+                flex: 0;
+                order: 1;
+            }
+        }
+     }
+
+ }

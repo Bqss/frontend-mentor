@@ -1,0 +1,83 @@
+@use 'var'as v;
+@use 'mixin' as m ;
+header{
+    font-size: 1rem;
+    @media(max-width : 670px){
+        font-size: clamp(.4rem , calc(.2rem + 2vw), 1rem);
+        h1{
+            font-size: 2.4em;
+        }
+       
+    }
+    .container{
+        width: min(1300px,83%);
+        
+        
+
+        .navbar{
+            margin: m.em(76) 0;
+            display: flex;
+            justify-content: space-between;
+            .logo{
+            
+                max-width: m.em(240);
+            }
+           .register{
+                font-size: 1em;
+
+           } 
+        }
+
+        .heading{
+            margin: m.em(250) auto m.em(140)  auto;
+            display: flex;
+            flex-direction: column;
+            
+            width: min(1020px, 100%);
+            .heading-desc{
+                
+                margin-bottom: 9.735em;
+                text-align: center;
+
+                & > .wrapper{
+                    max-width: m.rem(585);
+                    margin: 0 auto;
+                    display: flex;
+                    font-size: 1.2em;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3em;
+ 
+                }
+            }
+            .heading-image{
+                margin-bottom: m.em(140);
+            }
+        }
+
+        .statistics{
+            padding: 0 75px;
+            display: flex;
+            gap: 80px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            & > *{
+                margin: 0 auto;
+            }
+            h1{
+                
+                font-size: 5.4em;
+                margin-bottom: m.rem(43);
+                @media( max-width : 670px){
+                    margin-bottom: 26px;
+                }
+                
+            }
+            p{
+                font-size: 1.2em;
+                text-align: center;
+                opacity: 0.6;
+            }
+        }
+    }
+}

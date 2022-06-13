@@ -1,0 +1,6 @@
+@function em($fs , $bodyfs:16){
+    @return calc($fs / $bodyfs) * 1em;
+}
+@function rem($fs , $bodyfs:16){
+    @return calc($fs / $bodyfs) * 1rem;
+}

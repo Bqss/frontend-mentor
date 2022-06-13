@@ -1,0 +1,80 @@
+@use 'var' as v;
+@use 'mixin';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans',sans-serif;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins',sans-serif;
+}
+h2{
+    font-size: 2.6em;
+}
+
+header , main , footer{
+    
+    .container{
+        width: min(1190px, 83%);
+        margin: 0 auto;
+    }
+
+
+
+}
+img{
+    max-width: 100%;
+}
+
+.btn{
+    
+    border-radius: 4rem;
+    padding: .8em 2.4em;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all .4s;
+    
+
+    &.outline{
+        background-color: transparent;
+        border: 1px solid v.$Pink;
+        color: v.$Pink;
+        &:hover{
+            color: lighten(v.$Pink, 15%);
+            border-color: lighten(v.$Pink ,  15%);
+        }
+    }
+    &.primary{
+        padding: 1.6em 5.8em;
+        background-color: v.$Pink;
+        font-size: inherit;
+        border: none;
+        color: white;
+        &:hover{
+
+            background-color: lighten(v.$Pink ,  15%);
+        }
+    }
+
+}
+h1{
+    font-size: 2.9em;
+    margin-bottom: 3rem;
+}
+
+p{
+    font-weight: 600;
+    opacity: .6;
+    line-height: 1.4;
+
+}
+
+

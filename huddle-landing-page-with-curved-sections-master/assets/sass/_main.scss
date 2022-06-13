@@ -1,0 +1,185 @@
+@use "mixin" as m;
+@use 'var' as v;
+main{
+    section{
+        font-size: 1rem;
+        
+        
+        .curve{
+            height: 130px;
+            
+            &.curve-1{
+                background: url('../images/bg-section-top-desktop-1.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                
+            }   
+            &.curve-2{
+                background: url('../images/bg-section-bottom-desktop-1.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                
+            }   
+            &.curve-3{
+                background: url('../images/bg-section-top-desktop-1.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                
+            }   
+            &.curve-4{
+                background: url('../images/bg-section-bottom-desktop-2.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                
+            }   
+            
+            
+            
+        }
+
+        &:last-child{
+            .wrapper{
+
+                .container{
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 52px;
+                }
+            }
+        }
+
+
+        .wrapper{
+            padding: 95px 0;
+            .container{
+        
+                display: flex;
+                flex-wrap: wrap;
+                gap: m.em(135);
+    
+                & > *{
+                    flex:  1 1 calc( 50% - m.em(135));
+                }
+                
+                .desc{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: m.em(32) ;
+                    
+                    p{
+                        line-height: 1.4;
+                        font-size: .95em;
+                        opacity: .6;
+                    }
+                    
+                }
+                
+            }
+        }
+
+        &:nth-child(odd){
+            
+            background-color: v.$VeryPaleBlue;
+            .wrapper .container {
+                .img{
+                    order: 2;
+                }
+                .desc{
+                    order: 1;
+                }
+            }
+            .curve{
+               
+                background-color: white;
+            }
+        }
+        &:nth-child(even){
+            background-color: white;
+            .wrapper .container{
+                .img{
+                    order: 1;
+                }
+                .desc{
+                    order: 2;
+                }
+            }
+        }
+        @media(max-width : 768px){
+            font-size: clamp(.4rem , calc(.2rem + 2vw), 1rem);
+ 
+            .curve{
+                height: 90px;
+                &.curve-1{
+                    background: url('../images/bg-section-top-mobile-1.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    
+                }   
+                &.curve-2{
+                    background: url('../images/bg-section-bottom-mobile-1.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    
+                }   
+                &.curve-3{
+                    background: url('../images/bg-section-top-mobile-1.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    
+                }   
+                &.curve-4{
+                    background: url('../images/bg-section-bottom-mobile-2.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    
+                }  
+            } 
+            
+            .wrapper .container{
+                flex-direction: column;
+                text-align: center;
+                .desc p{
+                    font-size: 1.1em;
+                }
+            }
+
+            &:nth-child(even){
+                .wrapper .container{
+                    .img{
+                        order: 1;
+                    }
+                    .desc{
+                        order: 2;
+                    }
+                }
+            }
+            &:nth-child(odd){
+                .wrapper .container{
+                    .img{
+                        order: 1;
+                    }
+                    .desc{
+                        order: 2;
+                    }
+                    
+                }
+                .curve{
+               
+                    background-color: white;
+                }
+            }
+            
+        }
+        
+    }
+}
+

@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 2.6em;
+}
+
+header .container, main .container, footer .container {
+  width: min(1190px, 83%);
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 4rem;
+  padding: 0.8em 2.4em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.btn.outline {
+  background-color: transparent;
+  border: 1px solid hsl(322deg, 100%, 66%);
+  color: hsl(322deg, 100%, 66%);
+}
+.btn.outline:hover {
+  color: #ff9edb;
+  border-color: #ff9edb;
+}
+.btn.primary {
+  padding: 1.6em 5.8em;
+  background-color: hsl(322deg, 100%, 66%);
+  font-size: inherit;
+  border: none;
+  color: white;
+}
+.btn.primary:hover {
+  background-color: #ff9edb;
+}
+
+h1 {
+  font-size: 2.9em;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-weight: 600;
+  opacity: 0.6;
+  line-height: 1.4;
+}
+
+header {
+  font-size: 1rem;
+}
+@media (max-width: 670px) {
+  header {
+    font-size: clamp(0.4rem, 0.2rem + 2vw, 1rem);
+  }
+  header h1 {
+    font-size: 2.4em;
+  }
+}
+header .container {
+  width: min(1300px, 83%);
+}
+header .container .navbar {
+  margin: 4.75em 0;
+  display: flex;
+  justify-content: space-between;
+}
+header .container .navbar .logo {
+  max-width: 15em;
+}
+header .container .navbar .register {
+  font-size: 1em;
+}
+header .container .heading {
+  margin: 15.625em auto 8.75em auto;
+  display: flex;
+  flex-direction: column;
+  width: min(1020px, 100%);
+}
+header .container .heading .heading-desc {
+  margin-bottom: 9.735em;
+  text-align: center;
+}
+header .container .heading .heading-desc > .wrapper {
+  max-width: 36.5625rem;
+  margin: 0 auto;
+  display: flex;
+  font-size: 1.2em;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+header .container .heading .heading-image {
+  margin-bottom: 8.75em;
+}
+header .container .statistics {
+  padding: 0 75px;
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header .container .statistics > * {
+  margin: 0 auto;
+}
+header .container .statistics h1 {
+  font-size: 5.4em;
+  margin-bottom: 2.6875rem;
+}
+@media (max-width: 670px) {
+  header .container .statistics h1 {
+    margin-bottom: 26px;
+  }
+}
+header .container .statistics p {
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 0.6;
+}
+
+main section {
+  font-size: 1rem;
+}
+main section .curve {
+  height: 130px;
+}
+main section .curve.curve-1 {
+  background: url("../images/bg-section-top-desktop-1.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+main section .curve.curve-2 {
+  background: url("../images/bg-section-bottom-desktop-1.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+main section .curve.curve-3 {
+  background: url("../images/bg-section-top-desktop-1.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+main section .curve.curve-4 {
+  background: url("../images/bg-section-bottom-desktop-2.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+main section:last-child .wrapper .container {
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+main section .wrapper {
+  padding: 95px 0;
+}
+main section .wrapper .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8.4375em;
+}
+main section .wrapper .container > * {
+  flex: 1 1 calc(50% - 8.4375em);
+}
+main section .wrapper .container .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+}
+main section .wrapper .container .desc p {
+  line-height: 1.4;
+  font-size: 0.95em;
+  opacity: 0.6;
+}
+main section:nth-child(odd) {
+  background-color: hsl(207deg, 100%, 98%);
+}
+main section:nth-child(odd) .wrapper .container .img {
+  order: 2;
+}
+main section:nth-child(odd) .wrapper .container .desc {
+  order: 1;
+}
+main section:nth-child(odd) .curve {
+  background-color: white;
+}
+main section:nth-child(even) {
+  background-color: white;
+}
+main section:nth-child(even) .wrapper .container .img {
+  order: 1;
+}
+main section:nth-child(even) .wrapper .container .desc {
+  order: 2;
+}
+@media (max-width: 768px) {
+  main section {
+    font-size: clamp(0.4rem, 0.2rem + 2vw, 1rem);
+  }
+  main section .curve {
+    height: 90px;
+  }
+  main section .curve.curve-1 {
+    background: url("../images/bg-section-top-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  main section .curve.curve-2 {
+    background: url("../images/bg-section-bottom-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  main section .curve.curve-3 {
+    background: url("../images/bg-section-top-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  main section .curve.curve-4 {
+    background: url("../images/bg-section-bottom-mobile-2.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  main section .wrapper .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  main section .wrapper .container .desc p {
+    font-size: 1.1em;
+  }
+  main section:nth-child(even) .wrapper .container .img {
+    order: 1;
+  }
+  main section:nth-child(even) .wrapper .container .desc {
+    order: 2;
+  }
+  main section:nth-child(odd) .wrapper .container .img {
+    order: 1;
+  }
+  main section:nth-child(odd) .wrapper .container .desc {
+    order: 2;
+  }
+  main section:nth-child(odd) .curve {
+    background-color: white;
+  }
+}
+
+footer {
+  color: white;
+  background-color: hsl(192deg, 100%, 9%);
+  padding-bottom: 80px;
+}
+footer .curve {
+  height: 150px;
+  background: url("../images/bg-footer-top-desktop.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-color: white;
+}
+footer .wrapper .container {
+  display: flex;
+  padding-top: 120px;
+  gap: 100px;
+  justify-content: space-between;
+}
+footer .wrapper .container p {
+  opacity: 0.6;
+  font-size: 0.86rem;
+}
+footer .wrapper .container .institution-information {
+  flex: 0 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+footer .wrapper .container .contact > * {
+  display: flex;
+  gap: 20px;
+}
+footer .wrapper .container .contact .phone {
+  margin-bottom: 20px;
+}
+footer .wrapper .container .contact .email {
+  margin-bottom: 60px;
+}
+footer .wrapper .container .socmed ul {
+  display: flex;
+  list-style: none;
+  gap: 23px;
+}
+footer .wrapper .container .socmed ul a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 1rem;
+  transition: 0.4s;
+}
+footer .wrapper .container .socmed ul a:hover {
+  color: rgb(70, 115, 231);
+  border-color: rgb(70, 115, 231);
+}
+footer .wrapper .container .subscribe {
+  flex: 0 1 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+footer .wrapper .container .subscribe > *:not(form) {
+  width: min(338px, 100%);
+}
+footer .wrapper .container .subscribe h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+footer .wrapper .container .subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+footer .wrapper .container .subscribe form > * {
+  padding: 1em;
+  border-radius: 0.7rem;
+}
+footer .wrapper .container .subscribe form button {
+  padding: 1em 3em;
+}
+footer .wrapper .container .subscribe form input {
+  flex: 1 1 calc(65% - 35px);
+}
+footer .wrapper .container .subscribe form input::placeholder {
+  font-size: 1.2rem;
+}
+footer .wrapper .container .subscribe form input[value=false] {
+  outline: 1px solid hsl(0deg, 100%, 63%);
+}
+footer .wrapper .container .subscribe form .validate {
+  position: relative;
+  top: -40px;
+  left: -10px;
+  color: hsl(0deg, 100%, 63%);
+}
+@media (max-width: 768px) {
+  footer .curve {
+    height: 40px;
+  }
+  footer .wrapper .container {
+    flex-direction: column;
+    gap: 100px;
+  }
+  footer .wrapper .container .institution-information {
+    order: 2;
+  }
+  footer .wrapper .container .subscribe {
+    flex: 0;
+    order: 1;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
