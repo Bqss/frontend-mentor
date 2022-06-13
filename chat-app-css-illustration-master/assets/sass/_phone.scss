@@ -1,0 +1,187 @@
+@import 'general';
+.phone-ilustration{
+    
+    height: 490px;
+    overflow: hidden;
+    flex: 0 1 248px;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 1rem rgba(83, 83, 83, 0.526);
+
+    @media(max-width : 520px){
+        margin-top: 60px;
+    }
+    p{
+        opacity: 0.6;
+        font-size: .48em;
+        
+    }
+
+    .chat{
+        max-width: 128px;
+        padding: 8px;
+        background-color:hsl(272, 46%, 93%);
+        border-radius: .5rem;
+    }
+    .image-message{
+        width : 65%;
+        display: flex;
+        gap: 8px;
+        overflow: hidden;
+    }
+    .offer{
+        color: white;
+        display: flex;
+        padding: 8px 10px;
+        padding-right: 17px;
+        width: 160px;
+        border-radius: .7rem;
+        border-bottom-left-radius: .3rem;
+        align-items: center;
+        background: linear-gradient(to left , map-get($gradient, LightViolet ),map-get($gradient, LightMagenta ));
+        .circle{
+            
+            width: 12px;
+            height: 12px;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin-right: 8px;
+
+            
+        }
+        .offer-name{
+            margin-right: auto;
+        }
+        
+        
+    }
+    
+    .user1{
+        align-items: flex-start;
+        .chat{
+            color: map-get($map: $text, $key:ModerateViolet );
+            font-weight: 500;
+        }
+    }
+    .user2{
+        align-items: flex-end;
+        .chat{
+            background-color: white;
+            font-weight: 500;
+            opacity: .7;
+        }
+    }
+    
+
+    .phone-container{
+        
+        display: flex;
+        flex-direction: column;
+        border-radius: 2rem;
+        overflow: hidden;
+        border: 10px solid rgb(255, 255, 255);
+        
+
+
+        .chatapp-header{
+            position: relative;
+            display: flex;
+            gap: 9px;
+            width: 100%;
+            align-items: center;
+            border-bottom-left-radius: .3rem;
+            border-bottom-right-radius: .3rem;
+            padding: 10px 14px;
+            padding-top: 28px;
+            background: linear-gradient(to right , map-get($gradient, LightViolet ),map-get($gradient, LightMagenta ));
+            
+            .icon-back{
+                color: white;
+            }
+            &::before{
+                content: '';
+                width: 60%;
+                top: 0;
+                left: 20%;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                position: absolute;
+                height: 16px;
+                background-color: white;
+            }
+            .profile{
+
+                display: flex;
+                gap: 8px;
+            
+                color: white;
+                .avatar{
+                    border: 1px solid white;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    
+                }
+                .identity{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    p{
+                        font-size: .45em;
+                    }
+                }
+            }
+        }
+
+        .chatapp-main .chats{
+            padding: 12px 8px;
+            display: flex;
+            flex-direction: column;
+            background-color: map-get( $secondary,  LightGrayishViolet );
+            gap: 13px;
+
+            .chat-wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                .image-message{
+                    img{
+                        border-radius: 10px;
+                    }
+                }
+                
+            }
+        }
+
+        .send-message {
+            padding: 8px;
+            background-color: map-get( $secondary,  LightGrayishViolet );
+            .wrapper{
+                height: 33px;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                background-color: white;
+                padding-left: 20px ;
+                padding-right: 8px;
+                justify-content: space-between;
+
+                .placeholder{
+                    color: hsl(206, 6%, 79%);
+                }
+                .send-button{
+                    width: 24px;
+                    height: 24px;
+                    background-color: map-get($map: $secondary, $key: VeryDarkDesaturatedViolet );
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+            }
+            
+            
+        }
+    }
+}
