@@ -1,0 +1,197 @@
+@use 'var' as v;
+body main {
+    
+    display: block;
+    & > section{
+        display: flex;
+        justify-content: center;
+    }
+
+        .typography{
+            background: url('../images/bg-curve-desktop.svg');
+            background-size:300% 100%;
+            background-position:center ;
+            background-repeat: no-repeat;
+            margin-top: 170px;
+            @media(max-width : 864px){
+                margin-top: 75px;
+                background-size: 500% 100% ;
+            }
+            .container{
+                
+                padding-top: 190px;
+                display: flex;
+                gap: 80px;
+                align-items: center;
+                margin-bottom: 100px;
+
+                @media(max-width : 864px){
+                    flex-direction: column;
+                    padding-top: 67px;
+
+                    .desc{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        order: 2;
+                        
+                        & > p,h1{
+                            text-align: center;
+                        }
+                        
+                    }
+                    .image{
+                        order: 1;
+                    }
+                }
+                .desc{
+                    flex: 1 1 56%;
+                    h1{
+                        
+                        margin-bottom: 34px;
+                    }
+                    & > p{
+                        width: 75%;
+                        font-size: .97em;
+                        margin-bottom: 22px;
+
+                        @media(max-width : 864px){
+                            width: 100%;
+                        }
+                    }
+                    .testimoni{
+                        margin-top: 42px;
+                        border-radius: 1rem;
+                        width:  min(350px , 90%) ;
+                        background-color: white;
+                        display: flex;
+                        padding: 23px 36px;
+                        flex-direction: column;
+                        gap: 10px;
+                        box-shadow: 0 0 2rem -.7rem v.$LightGray;
+                        .quotes-img{
+                            margin-bottom: -5px;
+                        }
+                        p{  
+                            width: 100%;
+                            font-size: .8em;
+                            line-height: 1.6;
+                            
+                        }
+                        p:not(.job){
+                            margin-bottom: 6px;
+                        }
+                        .profile{
+                            display: flex;
+                            gap: 13px;
+                            .avatar{
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                            }
+                            .identity{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                .job{
+                                    font-size: .54em;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .link{
+                        padding: 2px;
+                        
+                        $main : v.$ModerateCyan;
+                        
+                        width: fit-content;
+                        border-bottom: 1px solid $main;
+                        a{
+                            display: flex;
+                            align-items: flex-end;
+                            color: $main;
+                            text-decoration: none;
+                            gap: 8px;
+                            img{
+                                margin-bottom: 2px;
+ 
+                            }
+                            
+                        }
+                        
+
+                        &:hover{
+                            border-color: lighten(v.$ModerateCyan,  20%);
+                            a{
+                                color: lighten(v.$ModerateCyan,  20%);
+                            }
+                            img{
+                                content: url('../images/icon-arrow\ hover.svg');
+                            }
+                        }
+                    }
+                }
+                .image{
+                    flex: 1 1 44%;
+                }
+            }
+        }
+        .offer{
+            background-color: v.$DesaturatedBlue;
+            padding: 104px 0;
+            color: white;
+            
+            .container{
+                display: flex;
+                justify-content: space-between;
+                gap: 245px;
+                .offer-name{
+                    flex: 1 1 52%;
+                    h2{
+                        font-size: 2rem;
+                        margin-bottom: 25px;
+
+                        @media (max-width : 677px){
+                            font-size: clamp(.7rem , calc(.7rem + 3vw) , 1.6rem);
+                        }
+                    }
+                }
+                .register{
+                    flex: 1 1 48%;
+                    display: flex;
+                    justify-content: center;
+                    .wrapper{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        justify-content: center;
+
+                        input{
+                            height: 45px;
+                            border-radius: .4rem;
+                        }
+                        button{
+                            height: 46px;
+                            border-radius: .4rem;
+                            
+                        }
+                    }
+                }
+
+                
+            }
+            @media(max-width : 864px){
+                padding: 50px 0 ;
+                .container{
+                    flex-direction: column;
+                    gap: 50px;
+                    text-align: center;
+                }
+            }
+        }
+    
+}

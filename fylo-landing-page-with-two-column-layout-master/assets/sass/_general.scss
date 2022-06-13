@@ -1,0 +1,79 @@
+@use 'var.scss' as v;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+h1,h2,h5{
+    font-family: 'Raleway',sans-serif;
+}
+p{
+    font-size: 1.08em;
+    line-height: 1.4;
+    opacity: .6;
+    font-weight: 500;
+
+    @media(max-width : 677px){
+        font-size: clamp(.6em , calc(.5em + 3vw),1em );
+    }
+}
+h1{
+    font-size: 2.4rem;
+    @media(max-width: 677px){
+        font-size: clamp(1rem ,calc(.7rem + 3vw),2rem);
+    }
+}
+button{
+    width: 200px;
+    @media (max-width : 864px){
+        width: 100%;
+    }
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: v.$BrightBlue;
+    cursor: pointer;
+    border-radius: .3rem;
+
+    &:hover{
+        background-color: lighten($color: v.$BrightBlue, $amount: 10%);
+    }
+
+}
+input[type="text"]{
+    padding-left: 22px;
+    border-radius: .3rem;
+
+    &::placeholder{
+        color: darkgray;
+        letter-spacing: .5px;
+    }
+}
+form.wrapper{
+    width: 90%;
+}
+body{
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Open Sans',sans-serif;
+
+    header,
+    main,
+    footer{
+        display: flex;
+        align-items: center;
+        .container{
+            margin: 0 auto;
+            margin-top: 60px;
+            width: min(1280px,84vw);
+
+            
+        }
+
+    }
+}

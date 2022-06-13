@@ -1,0 +1,95 @@
+@use 'var' as v;
+body footer {
+    background-color: v.$VeryDarkBlue;
+    padding: 104px 0 70px 0;
+    color: white;
+    a{
+        color: white;
+        &:hover{
+            color: lighten(v.$BrightBlue, $amount: 20%);
+        }
+    }
+    .container{
+        margin-top: 0;
+        
+
+        .wrapper{
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+
+            @media(max-width : 1170px){
+                gap: 40px;
+               .socmed ul {
+                justify-content: center;
+               }
+            }
+            .institution-info{
+                flex: 1 1 calc(30% - 100px);
+                
+
+                & >  div{
+                    display: flex;
+                    gap: 17px;
+
+                    img{
+                        width: 17px;
+                        height: 17px;
+                    }
+
+                    &:not(last-child){
+                        margin-bottom: 20px;
+                    }
+                }
+
+            }
+            .link-wrapper{
+                flex: 1 1 calc(46% - 100px);
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(2,minmax(250px,1fr));
+                    grid-template-rows: repeat(4,1fr);
+                    list-style: none;
+                    row-gap: 22px;
+                    @media (max-width : 767px){
+                        grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+                    }
+    
+                    a{
+                        text-decoration: none;
+                        opacity: .6;
+                    }
+                }
+            }
+            
+            .socmed{
+                flex: 1 1 calc(24% - 100px);
+                ul{
+                    display: flex;
+                    list-style: none;
+                    gap: 13px;
+                    li{
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        border: 1px solid white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover{
+                            border-color: lighten(v.$BrightBlue, $amount: 20%);
+                            a{
+                                color: lighten(v.$BrightBlue, $amount: 20%);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+}

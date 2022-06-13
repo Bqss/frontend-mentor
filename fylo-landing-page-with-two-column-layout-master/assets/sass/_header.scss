@@ -1,0 +1,125 @@
+@use 'var' as v ;
+header .container{
+    
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Raleway', sans-serif;
+
+        @media(max-width : 864px){
+            gap: 80px;
+            .links{
+                 flex: 1 1 auto;
+                 justify-content: flex-end;
+                 font-size: clamp(8px , calc(5px + 2vw) , 16px);
+            }
+            .logo{
+                flex: 1 0 min(80px , 50%);
+                align-items: center;
+            }
+        }
+
+        
+
+        .links{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 57px;
+            a{
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
+                color: v.$DesaturatedBlue;
+
+                &:hover{
+                    color: lighten($color: v.$DesaturatedBlue, $amount: 30%);
+                }
+              
+            }
+            @media(max-width : 864px){
+                gap: 4vw;
+            }
+        }
+  
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-top: 85px;
+        @media(max-width : 864px){
+            flex-direction: column;
+            .heading-desc{
+                order: 2;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .heading-image{
+                order: 1;
+            }
+        }
+
+        & > .heading-desc{
+            
+            flex: 1 1 46%;
+            
+
+            h1{
+                
+                margin-bottom: 30px;
+            }
+            p{
+                line-height: 1.4;
+                margin-bottom: 26px;
+              
+            }
+            
+            
+            .wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                gap: 20px;
+                justify-content: center;
+                
+                input{
+                    flex: 1 1 min(320px,calc(65% - 20px));
+                    height: 42px;
+                  
+
+                }
+                .btn{
+                    flex : 1 1 min(200px,calc( 35% - 20px));
+                    height: 42px;
+                }
+                #tf1{
+                
+                    transition: all .5s;
+                    &[value='false']{
+                        outline : 1px solid red;
+                        border: none;
+                    }
+                    
+                }
+    
+                #validate{
+                    bottom: -45px;
+                    left: 0;
+                    position: absolute;
+                    display: none;
+                    margin-top: 6px;
+                    font-size: .7em;
+                    color: red;
+    
+                }
+            }
+
+        }
+        & > .heading-image{
+            flex: 1 1 54%;
+        }
+    }
+}
