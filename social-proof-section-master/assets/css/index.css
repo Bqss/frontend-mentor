@@ -172,7 +172,8 @@ body {
   }
   .container .top {
     grid-template-columns: 1fr;
-    grid-template-areas: 'heading ' 'rating ';
+    grid-template-areas: 'heading '
+ 'rating ';
   }
   .container .top .heading {
     width: 100%;
@@ -194,7 +195,7 @@ body {
     padding: 2vh 0;
   }
   .container .bottom .testimoni .user .comentar {
-    overflow: auto;
+    overflow: visible;
   }
   .container .bottom .testimoni .user:nth-child(1) {
     margin-top: 0;
