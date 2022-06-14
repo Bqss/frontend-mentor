@@ -106,6 +106,7 @@ body{
 
     .container{
         width: 90%;
+        margin: 5.375em auto;
     }    
     .wrapper{
         grid-template-columns: 1fr;
@@ -129,6 +130,7 @@ body{
     }
 
     .wrapper .text{
+        padding: 2.1em;
         grid-area: text;
     }
     .text > *{
@@ -138,15 +140,21 @@ body{
         width: 100%;
         flex-direction: column;
         text-align: center;
-    justify-content: space-between;
+        justify-content: space-between;
         align-items: center;
     }
     .text .paragraph{
         width: 100%;
+        font-size: 1.1em;
+        padding: .1em;
     }
     .stat{
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
+    .text .title{
+        font-size: 1.9em;
+    }
+    
 }
 
 
