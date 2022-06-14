@@ -35,7 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 2%;
+    border-radius: 1em;
     background-color: red;
 }
 .square {
