@@ -28,12 +28,12 @@
 
 body{
     font : 15px 'Outfit', sans-serif;
-    
     background-color: var(--mainbg);
     display:flex;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 
@@ -44,10 +44,7 @@ body{
     background-color: var(--cardbg);
     border-radius: 5%;
     overflow: hidden;
-    color:White;
-    
-
-    
+    color:White; 
 }
 
 .card-image{
@@ -58,6 +55,7 @@ body{
     border-radius: 5%;
     height: auto;
     height: 264px;
+    cursor: pointer;
 }
 .card-image .card_image:hover{
     opacity: 0.4;
