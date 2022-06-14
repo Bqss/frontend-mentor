@@ -15,11 +15,18 @@
     box-sizing: border-box;
     
 }
+h1{
+    font-size: 1.5em;
+    margin-bottom: .8em;
+}
+p{
+    opacity: .6;
+}
 
 
 body{
     font-size: 15px;
-    height:50em;
+    min-height: 100vh;
     background-color:var(--Light_gray);
     font-family:'Outfit',sans-serif;
     display:flex;
@@ -33,6 +40,22 @@ body{
     overflow:hidden;
     height: auto;
     background-color:var(--White);
+    padding: 1em;
+    border-radius : 1.5em;
+    text-align:center;
+    
+}
+
+.container .qr-image{
+    
+    max-width: 100%;
+    border-radius: 1.3em;
+
+}
+
+.container .qr-body{
+    padding:1.3em;
+}
     padding: 1em;
     border-radius : 1.5em;
     text-align:center;
